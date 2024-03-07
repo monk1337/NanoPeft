@@ -1,4 +1,8 @@
 # NanoPeft
+
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
-Keeping the code so simple, it is very easy to hack to your needs, add new Lora methods from papers in layers/ and finetune easily as per needs.
-This is mostly for experiments/research purposes, not for scalable solutions. 
+
+# Why NanoPeft?
+- As a researcher, I like to try new papers on new methods, but hacking the Hugging Face PEFT or LitGit packages seems like a lot of work to integrate a new LoRA method quickly and benchmark it.
+- By keeping the code so simple, it is very easy to hack to your needs, add new LoRA methods from papers in the layers/ directory, and fine-tune easily as per your needs.
+- This is mostly for experimental/research purposes, not for scalable solutions.
