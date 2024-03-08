@@ -28,6 +28,9 @@ class LoRAConfigApplier:
         """
         self.config_path = config_path
         self.model = model
+        for param in model.parameters():
+            param.requires_grad = False
+        
         self.LinearWithLoRA = LinearWithLoRA
         self.lora_r = lora_r
         self.lora_alpha = lora_alpha
