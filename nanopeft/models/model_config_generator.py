@@ -1,4 +1,5 @@
 import json
+import os
 import uuid
 import torch.nn as nn
 
@@ -26,6 +27,9 @@ class ModelConfigGenerator:
         self.model = model
         self.config_template = None
         self.layer_role_mapping = None
+        self.generate_simplified_config_with_mapping()
+        self.save_config_to_json()
+
 
     def generate_simplified_config_with_mapping(self):
         """
