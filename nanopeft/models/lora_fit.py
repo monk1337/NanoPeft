@@ -9,20 +9,20 @@ class LoRAConfigApplier:
     Attributes:
         config_path (str): The file path to the LoRA configuration JSON.
         model (torch.nn.Module): The PyTorch model to be modified.
-        LinearWithLoRA (class): The class used to create LoRA-modified linear layers.
+        LoRALayer (class): The class used to create LoRA-modified linear layers.
         lora_r (int): The rank parameter for the LoRA layers.
         lora_alpha (int): The alpha parameter for the LoRA layers.
         config (dict): Loaded configuration from the JSON file.
     """
     
-    def __init__(self, config_path, model, LinearWithLoRA, lora_r=8, lora_alpha=16):
+    def __init__(self, config_path, model, LoRALayer, lora_r=8, lora_alpha=16):
         """
         Initializes the LoRAConfigApplier with model and configuration details.
         
         Parameters:
             config_path (str): Path to the LoRA configuration JSON file.
             model (torch.nn.Module): The model to apply LoRA modifications to.
-            LinearWithLoRA (class): The LoRA layer class to use for modifications.
+            LoRALayer (class): The LoRA layer class to use for modifications.
             lora_r (int): Rank parameter for LoRA layers.
             lora_alpha (int): Alpha parameter for LoRA layers.
         """
@@ -31,7 +31,7 @@ class LoRAConfigApplier:
         for param in model.parameters():
             param.requires_grad = False
         
-        self.LinearWithLoRA = LinearWithLoRA
+        self.LoRALayer = LoRALayer
         self.lora_r = lora_r
         self.lora_alpha = lora_alpha
         self.config = self._load_config()
@@ -47,7 +47,7 @@ class LoRAConfigApplier:
         It replaces specified linear layers with LoRA-enhanced layers according to the config.
         """
         # Create a partial function for creating LoRA layers with specified parameters
-        assign_lora = partial(self.LinearWithLoRA, rank=self.lora_r, alpha=self.lora_alpha)
+        assign_lora = partial(self.LoRALayer, rank=self.lora_r, alpha=self.lora_alpha)
         
         # Iterate over roles specified in the config, applying modifications where indicated
         for role, apply in self.config["config_template"].items():
@@ -94,6 +94,6 @@ class LoRAConfigApplier:
 # Example of how to use the class
 # model = AutoModelForSequenceClassification.from_pretrained("roberta-base", num_labels=2)
 # config_path = "path/to/your/config.json"
-# lora_applier = LoRAConfigApplier(config_path, model, LinearWithLoRA)
+# lora_applier = LoRAConfigApplier(config_path, model, LoRALayer)
 # lora_applier.apply_modifications()
 # print("Total number of trainable parameters after LoRA modification:", LoRAConfigApplier.count_parameters(model))
