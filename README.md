@@ -1,11 +1,6 @@
-
 <div align="center">
-<figure>
-    <img width="600 px" src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/lora.jpg" alt="Description of Image">
-</figure>
 <h1>NanoPeft</h1>
 </div>
-
 
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
 
@@ -14,6 +9,3 @@ The simplest repository & Neat implementation of different Lora methods for trai
 - Hacking the Hugging Face PEFT or LitGit packages seems like a lot of work to integrate a new LoRA method quickly and benchmark it.
 - By keeping the code so simple, it is very easy to hack to your needs, add new LoRA methods from papers in the layers/ directory, and fine-tune easily as per your needs.
 - This is mostly for experimental/research purposes, not for scalable solutions.
-
-
-Image Source: https://magazine.sebastianraschka.com/p/lora-and-dora-from-scratch
