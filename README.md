@@ -1,7 +1,7 @@
 
 <div align="center">
 <figure>
-    <img width="110px" src="path_to_your_image/lora.jpg" alt="Description of Image">
+    <img width="110px" src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/lora.jpg" alt="Description of Image">
     <figcaption style="font-size: 8px;">Source: https://magazine.sebastianraschka.com/p/lora-and-dora-from-scratch</figcaption>
 </figure>
 <h1>NanoPeft</h1>
