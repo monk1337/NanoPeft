@@ -2,6 +2,7 @@
 <h1>NanoPeft</h1>
 </div>
 
+Nano Parameter-Efficient Fine-Tuning
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
 
 
