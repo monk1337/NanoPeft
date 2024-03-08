@@ -1,6 +1,15 @@
-# NanoPeft
+
+<div align="center">
+<figure>
+    <img width="110px" src="path_to_your_image/lora.jpg" alt="Description of Image">
+    <figcaption style="font-size: 8px;">Source: https://magazine.sebastianraschka.com/p/lora-and-dora-from-scratch</figcaption>
+</figure>
+<h1>NanoPeft</h1>
+</div>
+
 
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
+
 
 # Why NanoPeft?
 - Hacking the Hugging Face PEFT or LitGit packages seems like a lot of work to integrate a new LoRA method quickly and benchmark it.
