@@ -4,6 +4,9 @@
 
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
 
+<img width="910px" src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/nanopeft_final.png">
+
+
 
 # Why NanoPeft?
 - Hacking the Hugging Face PEFT (Parameter-Efficient Fine-Tuning) or LitGit packages seems like a lot of work to integrate a new LoRA method quickly and benchmark it.
