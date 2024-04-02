@@ -41,5 +41,5 @@
 You should install NanoPeft using Pip command
 
 ```bash
-pip3 install git+https://github.com/promptslab/Promptify.git
+pip3 install git+https://github.com/monk1337/NanoPeft.git
 ```
