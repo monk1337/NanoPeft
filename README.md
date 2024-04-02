@@ -26,9 +26,20 @@
 <img width="500px" src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/nanopeft_final.png">
 </div>
 
-
 # Why NanoPeft?
 - Hacking the Hugging Face PEFT (Parameter-Efficient Fine-Tuning) or LitGit packages seems like a lot of work to integrate a new LoRA method quickly and benchmark it.
 - By keeping the code so simple, it is very easy to hack to your needs, add new LoRA methods from papers in the layers/ directory, and fine-tune easily as per your needs.
 - This is mostly for experimental/research purposes, not for scalable solutions.
 
+
+
+## Installation
+
+### With pip
+
+
+You should install NanoPeft using Pip command
+
+```bash
+pip3 install git+https://github.com/promptslab/Promptify.git
+```
