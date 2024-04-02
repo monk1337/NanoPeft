@@ -4,7 +4,7 @@
 
 The simplest repository & Neat implementation of different Lora methods for training/fine-tuning Transformer-based models (i.e., BERT, GPTs).
 
-<img width="600px" src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/nanopeft_final.png">
+<img src="https://raw.githubusercontent.com/monk1337/MultiMedQA/main/assets/nanopeft_final.png" style="display: block; margin-left: auto; margin-right: auto;" width="600px">
 
 
 
